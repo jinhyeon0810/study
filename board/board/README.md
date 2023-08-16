@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.js 로 게시판 만들기
 
-## Getting Started
+DB입출력 코드는 서버 컴포넌트 안에서 작성하는 것이 좋습니다.
+클라이언트 컴포넌트 안에 있는 코드는 유저 브라우저로 전달이 되기 때문에,
+민감한 코드들을 클라이언트 컴포넌트에 저장하는 것은 좋지 않은 선택 -> 서버 컴포넌트안에 작성
 
-First, run the development server:
+Link 태그 vs useRouter
+Link태그로 페이지 이동이 편한대 왜 useRouter를 사용하는가?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+let router = useRouter()
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+단순 페이지 이동 말고 router.back() 뒤로가기 , router.forward(), router.refresh() 등 앞으로가기 등 여러 기능들을 사용할수 있습니다.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+router.prefetch() 페이지 미리로드 기능은 Link 태그에서도 내장되어있습니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. 여러 페이지를 만드려면 Dynamic Route
+2. 현재 URL을 아는 방법 props / useRouter
