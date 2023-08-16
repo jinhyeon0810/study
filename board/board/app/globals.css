@@ -18,14 +18,15 @@ a {
 .board h2 {
   padding: 30px 50px;
   border-radius: 8px;
-  background-color: aquamarine;
+  background-color: rgb(235, 238, 255);
   cursor: pointer;
   color: black;
 }
 
 .list-bg {
-  background-color: rgb(249, 250, 255);
+  background-color: rgb(235, 238, 255);
   padding: 10px;
+  height: 100vh;
 }
 
 .list-item {
@@ -40,4 +41,20 @@ a {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 0;
+}
+
+.button-home {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.button-home button {
+  padding: 20px 30px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgb(244, 244, 244) 0px 2px 4px 0px;
+  font-size: 20px;
 }

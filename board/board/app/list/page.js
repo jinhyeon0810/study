@@ -1,3 +1,4 @@
+import DetailLink from "@/util/DetailLink";
 import { connectDB } from "@/util/database";
 import Link from "next/link";
 import React from "react";
@@ -20,6 +21,7 @@ export default async function List() {
           </Link>
         );
       })}
+      <DetailLink />
     </div>
   );
 }
