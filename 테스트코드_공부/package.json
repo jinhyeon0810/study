@@ -1,0 +1,12 @@
+{
+  "description": "",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.3"
+  }
+}
