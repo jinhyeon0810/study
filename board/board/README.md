@@ -15,3 +15,8 @@ router.prefetch() 페이지 미리로드 기능은 Link 태그에서도 내장�
 
 1. 여러 페이지를 만드려면 Dynamic Route
 2. 현재 URL을 아는 방법 props / useRouter
+
+3-tier architecture
+유저가 DB에 글을 저장하고 싶을때 바로 DB로 저장하는것이 아닌, 서버에 전송을하고 
+서버는 글을 받으면 검사 후 별 이상없으면 DB에 저장
+서버 : 유저의 요청을 들어주는 프로그램
