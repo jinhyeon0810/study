@@ -13,6 +13,13 @@ export default function DetailLink() {
       >
         홈
       </button>
+      <button
+        onClick={() => {
+          router.push("/write");
+        }}
+      >
+        글쓰기
+      </button>
     </div>
   );
 }
