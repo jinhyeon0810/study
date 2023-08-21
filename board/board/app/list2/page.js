@@ -3,7 +3,7 @@ import { connectDB } from "@/util/database";
 import React from "react";
 import Listitem from "./Listitem";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 10;
 
 export default async function List() {
   const client = await connectDB;
