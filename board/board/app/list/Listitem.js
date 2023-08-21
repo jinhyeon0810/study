@@ -14,8 +14,19 @@ export default function Listitem({ result }) {
 
             <Link href={`/edit/${data._id.toString()}`}>🖍</Link>
             <span
-              onClick={() => {
-                fetch("/api/post/delete"), { method: "DELETE", body: data._id };
+              onClick={(e) => {
+                fetch("/api/post/delete", { method: "DELETE", body: data._id })
+                  .then((res) => {
+                    if (res.status === 200) {
+                      return res.json();
+                    }
+                  })
+                  .then(() => {
+                    e.target.parentElement.style.opacity = 0;
+                    setTimeout(() => {
+                      e.target.parentElement.style.display = "none";
+                    }, 1000);
+                  });
               }}
             >
               🗑
