@@ -1,4 +1,4 @@
-const Calculator = require("../calculator");
+const Calculator = require("../../calculator");
 
 describe("Calculator", () => {
   let cal;
@@ -28,6 +28,7 @@ describe("Calculator", () => {
   });
 
   it("add should throw an Error if value is greater than 100", () => {
+    //에러를 예상하는 코드는 expect 안에 콜백함수전달, 안에서 에러 던져짐
     expect(() => {
       cal.add(101);
     }).toThrow("Value can not be greater than 100");
